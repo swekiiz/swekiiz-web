@@ -21,6 +21,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
