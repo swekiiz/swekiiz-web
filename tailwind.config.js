@@ -8,7 +8,6 @@ const palette = {
 
 module.exports = {
   purge: {
-    enabled: true,
     content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
     options: {
       safelist: [],
@@ -953,7 +952,7 @@ module.exports = {
     backgroundOrigin: ['responsive'],
     blur: ['responsive'],
     borderCollapse: ['responsive'],
-    borderColor: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
+    borderColor: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus', 'active'],
     borderOpacity: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
     borderRadius: ['responsive'],
     borderStyle: ['responsive'],
