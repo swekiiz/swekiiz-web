@@ -1,0 +1,19 @@
+@import 'foundation';
+@import 'variables';
+
+.center-with-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-with-grid {
+  display: grid;
+  place-items: center;
+}
+.center-with-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
