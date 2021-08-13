@@ -9,6 +9,7 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:tailwind/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -21,8 +22,10 @@
   "plugins": [
     "react",
     "@typescript-eslint",
+    "tailwind"
   ],
   "rules": {
+    "tailwind/class-order": 0,
     "react/jsx-filename-extension": [
       2,
       {
