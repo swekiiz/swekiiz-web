@@ -9,7 +9,8 @@ type addProps = {
   size?: 'big' | 'medium' | 'small';
 };
 
-export type OutlineButtonPropsType = addProps & React.ButtonHTMLAttributes<HTMLButtonElement>;
+export type OutlineButtonPropsType = addProps &
+  React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const OutlineButton: React.FC<OutlineButtonPropsType> = ({
   children,
@@ -42,8 +43,7 @@ export const OutlineButton: React.FC<OutlineButtonPropsType> = ({
           : 'text-white border-white bg-black active:text-black active:border-gray-700 active:bg-gray-700 hover:bg-white hover:text-black'
       }`}
       onClick={onClick}
-      {...rest}
-    >
+      {...rest}>
       {children}
     </button>
   );

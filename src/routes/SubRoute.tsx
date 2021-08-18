@@ -6,7 +6,9 @@ const RouteWithSubRoutes: React.FC<IRoute> = (route: IRoute): JSX.Element => (
   <Suspense fallback={route.fallback}>
     <Route
       path={route.path}
-      render={(props) => route.component && <route.component {...props} routes={route.routes} />}
+      render={props =>
+        route.component && <route.component {...props} routes={route.routes} />
+      }
     />
   </Suspense>
 );
