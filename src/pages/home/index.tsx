@@ -1,17 +1,22 @@
 import React from 'react';
 import { Lending, Screen } from 'layouts';
+import { Helmet } from 'react-helmet';
+import { Introduce as Name } from 'components/label';
 
 const Home: React.FC = (): JSX.Element => {
   return (
     <Lending>
-      <Screen className="flex items-center justify-center bg-white">
-        <h1 className="header-1 text-center">
-          Hi, my name is <br />
-          Thanadol sinananvanich
-        </h1>
-      </Screen>
-      <Screen className="flex items-center justify-center">
-        <h1 className="header-1">Hello world</h1>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>swekiiz</title>
+      </Helmet>
+      <Screen className="bg-white">
+        <div className="flex flex-row w-full h-full">
+          <div className="center-with-flex w-1/2">
+            <Name />
+          </div>
+          <div className="w-1/2">hello</div>
+        </div>
       </Screen>
     </Lending>
   );

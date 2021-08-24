@@ -1,0 +1,13 @@
+.word-space-none {
+  word-spacing: normal;
+}
+
+.word-space-inherit {
+  word-spacing: inherit;
+}
+
+@for $i from 1 through 4 {
+  .word-space-#{$i} {
+    word-spacing: #{$i / 4}rem;
+  }
+}

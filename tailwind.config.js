@@ -1,8 +1,8 @@
 const colors = require('tailwindcss/colors');
 
 const palette = {
-  primary: '#ff6af8',
-  secondary: '#6ac8ff',
+  primary: '#c33764',
+  secondary: '#1d2671',
   'light-gray': '#c0c0c0',
 };
 
