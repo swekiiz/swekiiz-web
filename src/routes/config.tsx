@@ -1,6 +1,6 @@
 import React, { lazy } from 'react';
 import { IRedirect, IRoute } from 'types/route';
-import Fallback from 'pages/fallback';
+import Fallback from 'components/fallback';
 
 export const routes: { [name: string]: IRoute } = {
   home: {

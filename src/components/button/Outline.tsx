@@ -4,7 +4,7 @@ type addProps = {
   children?: ReactNode;
   className?: string;
   style?: { [key: string]: string | number };
-  active?: boolean;
+  isActive?: boolean;
   width?: string;
   size?: 'big' | 'medium' | 'small';
 };
@@ -16,7 +16,7 @@ export const OutlineButton: React.FC<OutlineButtonPropsType> = ({
   children,
   className,
   style,
-  active,
+  isActive,
   size,
   width,
   onClick,
@@ -38,9 +38,9 @@ export const OutlineButton: React.FC<OutlineButtonPropsType> = ({
       ${
         rest.disabled
           ? 'text-light-gray border-light-gray bg-gray-800 cursor-not-allowed'
-          : active
+          : isActive
           ? 'text-black border-white bg-white'
-          : 'text-white border-white bg-black active:text-black active:border-gray-700 active:bg-gray-700 hover:bg-white hover:text-black'
+          : 'text-black border-black bg-white active:border-black active:bg-black hover:bg-black hover:text-white'
       }`}
       onClick={onClick}
       {...rest}>
