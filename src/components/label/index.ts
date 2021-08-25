@@ -1,1 +1,2 @@
-export { Introduce } from './Introduce';
+export { NameTag } from './NameTag';
+export { HeaderLabel } from './HeaderLabel';

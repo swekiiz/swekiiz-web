@@ -1,8 +1,6 @@
 import React from 'react';
 import { Lending, Screen } from 'layouts';
 import { Helmet } from 'react-helmet';
-import { Introduce as Name } from 'components/label';
-import { GradientHexagon, OutlineGradientHexagon } from 'components/shape';
 
 const Home: React.FC = (): JSX.Element => {
   return (
@@ -14,21 +12,13 @@ const Home: React.FC = (): JSX.Element => {
       <Screen className="bg-white">
         <div className="flex flex-row w-full h-full">
           <div className="center-with-flex w-1/2">
-            <Name />
+            <h1 className="text-gradient px-16 text-center text-5xl font-semibold">
+              Hi, my name is thanadol sinananvanich <br />
+              1234567890 <br />
+              abcdefghijklm nopqrstuvwxyz ABCDEFGHIJKLM NOPQRSTUVWXYZ
+            </h1>
           </div>
-          <div className="w-1/2">
-            <GradientHexagon size={'jumbo'} />
-            <GradientHexagon size={'extra'} />
-            <GradientHexagon size={'large'} />
-            <GradientHexagon size={'medium'} />
-            <GradientHexagon size={'small'} />
-
-            {/* <OutlineGradientHexagon size={'jumbo'} />
-            <OutlineGradientHexagon size={'extra'} />
-            <OutlineGradientHexagon size={'large'} />
-            <OutlineGradientHexagon size={'medium'} />
-            <OutlineGradientHexagon size={'small'} /> */}
-          </div>
+          <div className="w-1/2"></div>
         </div>
       </Screen>
     </Lending>
