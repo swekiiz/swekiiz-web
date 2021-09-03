@@ -1,11 +1,8 @@
 import React from 'react';
 import { Lending, Screen } from 'layouts';
 import { Helmet } from 'react-helmet';
-
-import { FiMail, FiPhone } from 'react-icons/fi';
-import { FaGithub } from 'react-icons/fa';
-
 import { Experience, IExperience } from 'components/card';
+import Footer from 'components/footer';
 import { name, surname } from 'constants/name';
 
 const Home: React.FC = (): JSX.Element => {
@@ -115,35 +112,7 @@ const Home: React.FC = (): JSX.Element => {
           <Experience key={key} {...item} />
         ))}
       </div>
-      <div className="flex px-12 py-8 w-full bg-black">
-        <div className="flex w-1/5">
-          <h1 className="m-auto py-4 text-center text-white text-4xl font-normal">
-            Contact me
-          </h1>
-        </div>
-        <div className="flex flex-col w-4/5 space-y-4">
-          <div className="ml-auto">
-            <p className="inline-block align-middle text-right text-light-gray text-xl font-light">
-              082-400-2211
-            </p>
-            <FiPhone className="inline-block align-middle ml-4 w-6 h-6 text-light-gray" />
-          </div>
-          <div className="ml-auto">
-            <p className="inline-block align-middle text-right text-light-gray text-xl font-light">
-              best_n.dol@hotmail.com
-            </p>
-            <FiMail className="inline-block align-middle ml-4 w-6 h-6 text-light-gray" />
-          </div>
-          <div className="ml-auto">
-            <a href="https://github.com/swekiiz">
-              <p className="inline-block align-middle text-right text-light-gray text-xl font-light">
-                github.com/swekiiz
-              </p>
-              <div className="mark-img-github inline-block align-middle w-6 h-6 ml-4"></div>
-            </a>
-          </div>
-        </div>
-      </div>
+      <Footer />
     </Lending>
   );
 };
