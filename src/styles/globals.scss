@@ -38,6 +38,24 @@
   color: transparent;
 }
 
+.text-gradient-kmitl {
+  background-image: linear-gradient(135deg, $kmitl, #fece2f);
+  background-clip: text;
+  color: transparent;
+}
+
+.mark-img-github {
+  background-image: linear-gradient(90deg, $primary, $secondary);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  mask-image: url('../assets/icons/github.svg');
+  mask-size: 24px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
 .vertical-gradient {
   height: 100%;
   width: 0px;

@@ -4,6 +4,8 @@ const palette = {
   primary: '#c33764',
   secondary: '#1d2671',
   'light-gray': '#c0c0c0',
+  kmitl: '#fe6d2f',
+  grey: '#3d495c',
 };
 
 module.exports = {
@@ -188,6 +190,7 @@ module.exports = {
       '4xl': '2.25rem',
       '5xl': '3rem',
       full: '9999px',
+      inherit: 'inherit',
     },
     borderWidth: {
       DEFAULT: '1px',
@@ -922,12 +925,15 @@ module.exports = {
     }),
     zIndex: {
       auto: 'auto',
+      '-1': '-1',
       0: '0',
+      1: '1',
       10: '10',
       20: '20',
       30: '30',
       40: '40',
       50: '50',
+      100: '100',
     },
   },
   variantOrder: [
