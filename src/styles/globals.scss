@@ -29,12 +29,23 @@
 
 .bg-gradient {
   background: $primary;
-  background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+  background-image: linear-gradient(135deg, $primary 0%, $secondary 100%);
 }
 
 .text-gradient {
   background-image: linear-gradient(90deg, $primary, $secondary);
   background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-fixed {
+  background-image: linear-gradient(125deg, $primary, $secondary);
+  background-clip: text;
+  // background-attachment: fixed;
+  // background-repeat: no-repeat;
+  // background-size: auto 100%;
+  // background-position: center bottom;
+  // background-origin: 0px;
   color: transparent;
 }
 
@@ -60,6 +71,18 @@
   }
 }
 
+.mark-img-lightbulb {
+  background-image: linear-gradient(90deg, $primary, $secondary);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  mask-image: url('../assets/icons/lightbulb.svg');
+  mask-size: 112px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
 .mark-img-arrow-forward {
   background-image: linear-gradient(90deg, $primary, $secondary);
   background-size: contain;
@@ -79,12 +102,4 @@
   border-style: solid;
   border-image-source: linear-gradient(45deg, $primary, $secondary);
   border-image-slice: 1;
-}
-
-.hexagon-wrapper-transform {
-  transform: rotate(-30deg) skewX(30deg) scaleY(0.866);
-}
-
-.hexagon-inner-transform {
-  transform: scaleY(1.155) skewX(-30deg) rotate(30deg);
 }

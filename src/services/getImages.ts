@@ -19,4 +19,4 @@ const cryptoIamges: { [token: string]: string | undefined } = {
 };
 
 export const getImg = (token: string): string | undefined =>
-  cryptoIamges[token];
+  cryptoIamges[token.toUpperCase()];
