@@ -29,7 +29,7 @@
 
 .bg-gradient {
   background: $primary;
-  background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+  background-image: linear-gradient(135deg, $primary 0%, $secondary 100%);
 }
 
 .text-gradient {
@@ -38,10 +38,68 @@
   color: transparent;
 }
 
-.hexagon-wrapper-transform {
-  transform: rotate(-30deg) skewX(30deg) scaleY(0.866);
+.text-gradient-fixed {
+  background-image: linear-gradient(125deg, $primary, $secondary);
+  background-clip: text;
+  // background-attachment: fixed;
+  // background-repeat: no-repeat;
+  // background-size: auto 100%;
+  // background-position: center bottom;
+  // background-origin: 0px;
+  color: transparent;
 }
 
-.hexagon-inner-transform {
-  transform: scaleY(1.155) skewX(-30deg) rotate(30deg);
+.text-gradient-kmitl {
+  background-image: linear-gradient(135deg, $kmitl, #fece2f);
+  background-clip: text;
+  color: transparent;
+}
+
+.mark-img-github {
+  background-image: linear-gradient(90deg, $light-gray, $light-gray);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  mask-image: url('../assets/icons/github.svg');
+  mask-size: 24px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  &-hover {
+    background-image: linear-gradient(90deg, $primary, $secondary);
+  }
+}
+
+.mark-img-lightbulb {
+  background-image: linear-gradient(90deg, $primary, $secondary);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  mask-image: url('../assets/icons/lightbulb.svg');
+  mask-size: 112px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.mark-img-arrow-forward {
+  background-image: linear-gradient(90deg, $primary, $secondary);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  mask-image: url('../assets/icons/arrow-forward.svg');
+  mask-size: 24px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.vertical-gradient {
+  height: 100%;
+  width: 0px;
+  border-width: 1px;
+  border-style: solid;
+  border-image-source: linear-gradient(45deg, $primary, $secondary);
+  border-image-slice: 1;
 }
