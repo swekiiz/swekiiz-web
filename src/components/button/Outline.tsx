@@ -43,7 +43,8 @@ export const OutlineButton: React.FC<OutlineButtonPropsType> = ({
           : 'text-black border-black bg-white active:border-black active:bg-black hover:bg-black hover:text-white'
       }`}
       onClick={onClick}
-      {...rest}>
+      {...rest}
+    >
       {children}
     </button>
   );

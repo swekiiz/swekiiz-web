@@ -1,20 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useContext } from 'react';
+import { ThemesContext } from 'contexts/ThemesContext';
+import { themeType } from 'types/themes';
 
-type themeType = 'light' | 'dark';
+const useDarkMode = (): [themeType, (theme: themeType) => void, () => void] => {
+  const { theme, setTheme } = useContext(ThemesContext);
 
-const useDarkMode = (): [themeType, (theme: themeType) => void] => {
-  const [theme, _setTheme] = useState<themeType>('light');
-  const toggleTheme: themeType = theme === 'light' ? 'dark' : 'light';
+  const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
 
-  const setTheme = (theme: themeType) => _setTheme(theme);
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-    root.classList.remove(toggleTheme);
-    root.classList.add(theme);
-  }, [theme]);
-
-  return [theme, setTheme];
+  return [theme, setTheme, toggleTheme];
 };
 
 export default useDarkMode;
