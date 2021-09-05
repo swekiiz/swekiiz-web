@@ -2,9 +2,10 @@ import React from 'react';
 import { Lending, Screen } from 'layouts';
 import { Helmet } from 'react-helmet';
 import { BookAndBubble } from 'components/shape';
-import Footer from 'components/footer';
+import { ToggleThemeButton } from 'components/button';
 import { GradientVr } from 'components/line';
 import { Parallax } from 'components/effect';
+import Footer from 'components/footer';
 import { TokenGroup } from './TokenGroup';
 import { Education } from './Education';
 import { Greet } from './Greet';
@@ -21,12 +22,18 @@ const Home: React.FC = (): JSX.Element => {
         <meta charSet="utf-8" />
         <title>swekiiz</title>
       </Helmet>
-      <Screen className="relative flex bg-white">
+      <Parallax
+        className="absolute z-10 right-8 top-8 xl:fixed"
+        speedY={width < xl ? 0.93 : undefined}
+      >
+        <ToggleThemeButton />
+      </Parallax>
+      <Screen className="relative flex dark:bg-black bg-white">
         <div className="flex flex-row m-auto w-full h-3/5">
           <div className="center-with-flex w-full xl:w-1/2">
             <Parallax
-              speedX={width > xl ? -1 : undefined}
-              speedY={width > xl ? -1.5 : 0.36}
+              speedX={width >= xl ? -1 : undefined}
+              speedY={width >= xl ? -1.5 : 0.36}
             >
               <Greet />
             </Parallax>
@@ -38,7 +45,7 @@ const Home: React.FC = (): JSX.Element => {
           <ScrollArrow />
         </div>
       </Screen>
-      <Screen className="flex bg-white">
+      <Screen className="flex dark:bg-black bg-white">
         <div className="flex flex-row m-auto w-full h-3/5">
           <div className="hidden w-1/2 h-full md:block">
             <BookAndBubble />

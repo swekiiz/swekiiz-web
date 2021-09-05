@@ -9,7 +9,7 @@ export const ExperienceSection: React.FC = () => {
   const { width, lg } = useViewport();
 
   return (
-    <div className="px-12 py-8 bg-white space-y-4 sm:py-24 sm:space-y-6 md:space-y-16">
+    <div className="px-12 py-8 dark:bg-black bg-white space-y-4 sm:py-24 sm:space-y-6 md:space-y-16">
       {experiencesList.map((item: IExperience, index: number) => (
         <Fragment key={index}>
           <Experience {...item} />
