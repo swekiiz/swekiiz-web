@@ -10,8 +10,11 @@ import { Education } from './Education';
 import { Greet } from './Greet';
 import { ScrollArrow } from './ScrollArrow';
 import { ExperienceSection } from './ExperienceSection';
+import useViewport from 'hooks/useViewport';
 
 const Home: React.FC = (): JSX.Element => {
+  const { width, xl } = useViewport();
+
   return (
     <Lending>
       <Helmet>
@@ -21,7 +24,10 @@ const Home: React.FC = (): JSX.Element => {
       <Screen className="relative flex bg-white">
         <div className="flex flex-row m-auto w-full h-3/5">
           <div className="center-with-flex w-full xl:w-1/2">
-            <Parallax speedX={-1} speedY={-1.5}>
+            <Parallax
+              speedX={width > xl ? -1 : undefined}
+              speedY={width > xl ? -1.5 : 0.36}
+            >
               <Greet />
             </Parallax>
           </div>
