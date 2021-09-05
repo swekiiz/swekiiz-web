@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
-import useHover from 'hooks/useHover';
 import { FiMail, FiPhone } from 'react-icons/fi';
+import { phoneNumber, email, github } from 'constants/identifyData';
+import useHover from 'hooks/useHover';
 
 const Footer: React.FC = (): JSX.Element => {
   const ref = useRef(null);
@@ -16,13 +17,13 @@ const Footer: React.FC = (): JSX.Element => {
       <div className="flex flex-col items-start w-full space-y-4 sm:items-end sm:w-1/2 xl:w-4/5">
         <div className="p-0">
           <p className="inline-block align-middle text-left text-light-gray text-lg font-light sm:text-right sm:text-xl">
-            082-400-2211
+            {phoneNumber}
           </p>
           <FiPhone className="inline-block align-middle ml-4 w-6 h-6 text-light-gray" />
         </div>
         <div className="p-0">
           <p className="inline-block align-middle text-left text-light-gray text-lg font-light sm:text-right sm:text-xl">
-            best_n.dol@hotmail.com
+            {email}
           </p>
           <FiMail className="inline-block align-middle ml-4 w-6 h-6 text-light-gray" />
         </div>
@@ -32,7 +33,7 @@ const Footer: React.FC = (): JSX.Element => {
             <div className="mark-img-arrow-forward inline-block align-middle ml-2 w-4 h-4" />
           </p>
           <a
-            href="https://github.com/swekiiz"
+            href={`https://github.com/${github}`}
             ref={ref}
             className="inline-block align-middle"
           >
@@ -41,7 +42,7 @@ const Footer: React.FC = (): JSX.Element => {
                 isHover ? 'text-gradient' : 'text-light-gray'
               } text-lg sm:text-xl font-light`}
             >
-              github.com/swekiiz
+              github.com/{github}
             </p>
             <div
               className={`mark-img-github ${
