@@ -1,11 +1,14 @@
 import React from 'react';
 import Routes from './routes/routes';
 import { WindowProvider } from 'contexts/WindowContext';
+import { ThemesProvider } from 'contexts/ThemesContext';
 
 const App: React.FC = (): JSX.Element => {
   return (
     <WindowProvider>
-      <Routes />
+      <ThemesProvider>
+        <Routes />
+      </ThemesProvider>
     </WindowProvider>
   );
 };

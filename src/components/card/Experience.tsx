@@ -17,7 +17,9 @@ export const Experience: React.FC<IExperience> = ({
         <h1 className="text-gradient mb-2 text-lg font-semibold sm:text-2xl">
           {title}
         </h1>
-        <p className="pl-8 text-grey text-sm sm:text-base">{description}</p>
+        <p className="pl-8 dark:text-gray-100 text-grey text-sm sm:text-base">
+          {description}
+        </p>
       </div>
     </div>
   );

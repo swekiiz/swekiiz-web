@@ -5,15 +5,15 @@ export const Education: React.FC = (): JSX.Element => (
     <h1 className="text-gradient w-full text-center text-5xl font-semibold leading-tight md:w-auto md:text-left">
       Education
     </h1>
-    <div className="pl-8 text-grey text-lg">
-      <h1 className="block w-16 h-auto text-secondary text-2xl sm:inline-block">
+    <div className="pl-8 dark:text-gray-100 text-grey text-lg">
+      <h1 className="block w-16 h-auto dark:text-primary text-secondary text-2xl sm:inline-block">
         Major
       </h1>
       <span className="hidden mx-2 sm:inline-block"> - </span>
       <p className="inline-block p-4 sm:p-0">Computer Engineering</p>
     </div>
-    <div className="pl-8 text-grey text-lg">
-      <h1 className="block w-16 h-auto text-secondary text-2xl sm:inline-block">
+    <div className="pl-8 dark:text-gray-100 text-grey text-lg">
+      <h1 className="block w-16 h-auto dark:text-primary text-secondary text-2xl sm:inline-block">
         Minor
       </h1>
       <span className="hidden mx-2 sm:inline-block"> - </span>
