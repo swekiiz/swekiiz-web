@@ -1,10 +1,5 @@
 import React from 'react';
-
-export interface IExperience {
-  title?: string;
-  year?: string;
-  description?: string;
-}
+import { IExperience } from 'types/experience';
 
 export const Experience: React.FC<IExperience> = ({
   title,
@@ -22,7 +17,7 @@ export const Experience: React.FC<IExperience> = ({
         <h1 className="text-gradient mb-2 text-lg font-semibold sm:text-2xl">
           {title}
         </h1>
-        <p className="text-grey pl-8 text-sm sm:text-base">{description}</p>
+        <p className="pl-8 text-grey text-sm sm:text-base">{description}</p>
       </div>
     </div>
   );
