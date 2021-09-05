@@ -13,7 +13,7 @@ export const TokenGroup: React.FC = (): JSX.Element => {
         style={{
           top: '160px',
           left: '220px',
-          transform: `translateY(${offSetY * 0.0001}px)`,
+          transform: `translateY(${offSetY * 0.3}px)`,
         }}
       />
       <img
