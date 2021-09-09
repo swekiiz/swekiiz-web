@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Lending, Screen } from 'layouts';
 import { Helmet } from 'react-helmet-async';
 import { BookAndBubble } from 'components/shape';
-import { ToggleThemeButton } from 'components/button';
+import { HamburgerButton, ToggleThemeButton } from 'components/button';
 import { GradientVr } from 'components/line';
 import { Parallax } from 'components/effect';
 import Footer from 'components/footer';
@@ -12,19 +12,31 @@ import { Greet } from './Greet';
 import { ScrollArrow } from './ScrollArrow';
 import { ExperienceSection } from './ExperienceSection';
 import useViewport from 'hooks/useViewport';
+import { MenuModal } from 'components/modal';
 
 const Home: React.FC = (): JSX.Element => {
   const { width, xl } = useViewport();
+
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
     <Lending>
       <Helmet>
         <title>swekiiz</title>
       </Helmet>
-
+      <MenuModal
+        isOpen={isMenuOpen}
+        closeModalEvent={() => setIsMenuOpen(false)}
+      />
+      <Parallax
+        className="absolute z-10 left-8 top-8 xl:fixed"
+        speedY={width < xl ? 0.82 : undefined}
+      >
+        <HamburgerButton onClick={() => setIsMenuOpen(true)} />
+      </Parallax>
       <Parallax
         className="absolute z-10 right-8 top-8 xl:fixed"
-        speedY={width < xl ? 0.93 : undefined}
+        speedY={width < xl ? 0.82 : undefined}
       >
         <ToggleThemeButton />
       </Parallax>
