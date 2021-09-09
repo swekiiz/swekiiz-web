@@ -103,3 +103,25 @@
   border-image-source: linear-gradient(45deg, $primary, $secondary);
   border-image-slice: 1;
 }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(25vh);
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
+}
+
+.fade-in-section {
+  animation-name: fade-in;
+  animation-timing-function: ease-out;
+  animation-duration: 0.7s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+}
