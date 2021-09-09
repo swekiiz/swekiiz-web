@@ -14,10 +14,10 @@ export const FadeIn: React.FC<IFadeIn> = ({
 }: IFadeIn): JSX.Element => {
   const { offSetY } = useContext(WindowContext);
 
+  const domRef = useRef<HTMLDivElement | null>(null);
+
   const [isVisible, setVisible] = useState<boolean>(false);
   const [isFinished, setIsFinished] = useState<boolean>(false);
-
-  const domRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const node = domRef?.current;
@@ -39,10 +39,8 @@ export const FadeIn: React.FC<IFadeIn> = ({
   }, [isVisible]);
 
   useEffect(() => {
-    if (resetOffSetY !== undefined && offSetY <= resetOffSetY && isFinished) {
+    if (resetOffSetY !== undefined && offSetY <= resetOffSetY && isFinished)
       setIsFinished(false);
-      console.log('reset');
-    }
   }, [offSetY]);
 
   return (

@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 
 interface ICircle {
   radius?: string;
   angle?: string;
-  style?: { [key: string]: string };
+  style?: CSSProperties;
 }
 
 export const Circle: React.FC<ICircle> = ({
