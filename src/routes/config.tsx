@@ -1,6 +1,8 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import { IRedirect, IRoute } from 'types/route';
 import Fallback from 'components/fallback';
+
+const { lazy } = React;
 
 export const freezeRoutes = {
   home: {

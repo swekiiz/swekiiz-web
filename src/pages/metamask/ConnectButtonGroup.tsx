@@ -1,7 +1,7 @@
 import React from 'react';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
-import { OButton } from 'components/button';
+import { DangerOutlineButton, OButton } from 'components/button';
 import { connectorsByName, ConnectorNames } from 'services/connector';
 import { useEagerConnect, useInactiveListener } from 'hooks/useConnectWallet';
 
@@ -37,14 +37,14 @@ export const ConnectButtonGroup: React.FC = (): JSX.Element => {
           </OButton>
         );
       })}
-      <OButton
+      <DangerOutlineButton
         className="px-4"
         onClick={() => {
           deactivate();
         }}
       >
         deactivate
-      </OButton>
+      </DangerOutlineButton>
     </>
   );
 };
