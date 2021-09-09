@@ -31,10 +31,7 @@ const Home: React.FC = (): JSX.Element => {
       <Screen className="relative flex dark:bg-black bg-white">
         <div className="flex flex-row m-auto w-full h-3/5">
           <div className="center-with-flex w-full xl:w-1/2">
-            <Parallax
-              speedX={width >= xl ? -1 : undefined}
-              speedY={width >= xl ? -1.5 : 0.36}
-            >
+            <Parallax speedY={0.36}>
               <Greet />
             </Parallax>
           </div>
