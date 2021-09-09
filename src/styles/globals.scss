@@ -107,7 +107,7 @@
 @keyframes fade-in {
   0% {
     opacity: 0;
-    transform: translateY(20vh);
+    transform: translateY(25vh);
     visibility: hidden;
   }
 
@@ -121,7 +121,7 @@
 .fade-in-section {
   animation-name: fade-in;
   animation-timing-function: ease-out;
-  animation-duration: 0.5s;
+  animation-duration: 0.7s;
   animation-direction: normal;
   animation-iteration-count: 1;
 }

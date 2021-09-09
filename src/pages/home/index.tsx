@@ -22,6 +22,7 @@ const Home: React.FC = (): JSX.Element => {
         <meta charSet="utf-8" />
         <title>swekiiz</title>
       </Helmet>
+
       <Parallax
         className="absolute z-10 right-8 top-8 xl:fixed"
         speedY={width < xl ? 0.93 : undefined}

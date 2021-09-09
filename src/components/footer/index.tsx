@@ -28,10 +28,10 @@ const Footer: React.FC = (): JSX.Element => {
           <FiMail className="inline-block align-middle ml-4 w-6 h-6 text-light-gray" />
         </div>
         <div className="p-0">
-          <p className="text-gradient hidden align-middle mr-4 text-lg sm:inline-block">
+          <div className="text-gradient hidden align-middle mr-4 text-lg sm:inline-block">
             click
             <div className="mark-img-arrow-forward inline-block align-middle ml-2 w-4 h-4" />
-          </p>
+          </div>
           <a
             href={`https://github.com/${github}`}
             ref={ref}
