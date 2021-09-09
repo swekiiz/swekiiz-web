@@ -3,12 +3,21 @@ import BookLight from 'assets/images/book/book-light.svg';
 import BookDark from 'assets/images/book/book-dark.svg';
 import { Circle } from './Circle';
 import useDarkMode from 'hooks/useDarkMode';
+import useViewport from 'hooks/useViewport';
 
 export const BookAndBubble: React.FC = (): JSX.Element => {
   const [theme, ,] = useDarkMode();
+  const { height } = useViewport();
 
   return (
-    <div className="relative m-auto" style={{ height: '100%', width: '228px' }}>
+    <div
+      className="relative m-auto"
+      style={{
+        height: '100%',
+        width: '228px',
+        transform: height < 642 ? 'scale(60%) translateY(100px)' : 'none',
+      }}
+    >
       <img
         className="absolute block w-auto h-20"
         style={{

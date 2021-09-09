@@ -32,8 +32,23 @@
   background-image: linear-gradient(135deg, $primary 0%, $secondary 100%);
 }
 
+.bg-gradient-blur {
+  background-image: linear-gradient(
+    135deg,
+    $primary-soft 20%,
+    $secondary-soft 100%
+  );
+  filter: blur(24px);
+}
+
 .text-gradient {
   background-image: linear-gradient(90deg, $primary, $secondary);
+  background-clip: text;
+  color: transparent;
+}
+
+.text-secondary-gradient {
+  background-image: linear-gradient(90deg, #2f89dd, $secondary);
   background-clip: text;
   color: transparent;
 }
@@ -124,4 +139,52 @@
   animation-duration: 0.7s;
   animation-direction: normal;
   animation-iteration-count: 1;
+}
+html {
+  &.light {
+    .bg-light-twotone {
+      background: linear-gradient(90deg, #ffffff 50%, #f4f4f4 50%);
+    }
+
+    .menu-soft-text {
+      position: absolute;
+      color: rgba(0, 0, 200, 0.05);
+    }
+  }
+
+  &.dark {
+    .bg-light-twotone {
+      background: linear-gradient(90deg, #000000 50%, #0c0c0c 50%);
+    }
+
+    .menu-soft-text {
+      position: absolute;
+      color: rgba(126, 126, 163, 0.24);
+    }
+  }
+  .menu-soft-text {
+    font-size: 16vw;
+    letter-spacing: 20px;
+  }
+
+  @media screen and (max-width: $md) and (min-width: 556px) {
+    .menu-soft-text {
+      font-size: 10vw;
+      letter-spacing: 18px;
+    }
+  }
+
+  @media screen and (max-width: 556px) {
+    .menu-soft-text {
+      font-size: 10vw;
+      letter-spacing: 8px;
+    }
+  }
+}
+
+.explain-hover {
+  transition: all 0.2s ease-out;
+  &:hover {
+    transform: scale(200%);
+  }
 }

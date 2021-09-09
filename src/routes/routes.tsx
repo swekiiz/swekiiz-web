@@ -10,21 +10,23 @@ import { routes, redirectRoutes } from './config';
 import { IRedirect } from 'types/route';
 import NotFound from 'pages/404';
 
-const RedirectRoutes: JSX.Element[] = redirectRoutes.map(
-  (route: IRedirect, key) => (
-    <Route key={key} path={route.path} exact>
+const RedirectRoutesMap: Array<JSX.Element> = redirectRoutes.map(
+  (route: IRedirect, index: number) => (
+    <Route key={index} path={route.path} exact>
       <Redirect to={route.redirect} />
     </Route>
   ),
 );
 
+const RoutesMap: Array<JSX.Element> = Object.keys(routes).map(
+  (key, index: number) => <RouteWithSubRoutes key={index} {...routes[key]} />,
+);
+
 const Routes: React.FC = () => (
   <Router>
     <Switch>
-      {RedirectRoutes}
-      {Object.keys(routes).map((key, index) => (
-        <RouteWithSubRoutes key={index} {...routes[key]} />
-      ))}
+      {RoutesMap}
+      {RedirectRoutesMap}
       <Route component={NotFound} />
     </Switch>
   </Router>

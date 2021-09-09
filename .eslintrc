@@ -28,6 +28,7 @@
     "@typescript-eslint/no-empty-interface": 0,
     "no-empty-pattern": 0,
     "tailwind/class-order": 0,
+    "no-extra-boolean-cast": 0,
     "react/jsx-filename-extension": [
       2,
       {

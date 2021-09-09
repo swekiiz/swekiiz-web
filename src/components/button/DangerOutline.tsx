@@ -9,10 +9,10 @@ type addProps = {
   size?: 'big' | 'medium' | 'small';
 };
 
-export type OutlineButtonPropsType = addProps &
+type OutlineButtonPropsType = addProps &
   React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const OutlineButton: React.FC<OutlineButtonPropsType> = ({
+export const DangerOutlineButton: React.FC<OutlineButtonPropsType> = ({
   children,
   className,
   style,
@@ -39,8 +39,8 @@ export const OutlineButton: React.FC<OutlineButtonPropsType> = ({
         rest.disabled
           ? 'text-light-gray border-light-gray bg-white dark:bg-black dark:border-grey dark:text-grey cursor-not-allowed'
           : isActive
-          ? 'text-secondary border-white bg-white dark:bg-black'
-          : 'text-secondary border-secondary bg-white dark:bg-black dark:text-primary dark:border-primary dark:hover:bg-primary active:border-secondary active:bg-secondary hover:bg-secondary hover:text-white dark:hover:text-white'
+          ? 'text-red-500 border-white bg-white dark:bg-black'
+          : 'text-red-500 border-red-500 bg-white dark:bg-black dark:hover:bg-red-500 active:border-red-500 active:bg-red-500 hover:bg-red-500 hover:text-white dark:hover:text-white'
       }`}
       onClick={onClick}
       {...rest}

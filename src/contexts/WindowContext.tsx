@@ -29,6 +29,7 @@ export const WindowProvider: React.FC = ({
       setWidth(window.innerWidth);
       setHeight(window.innerHeight);
     };
+
     window.addEventListener('resize', handleWindowResize);
 
     return () => window.removeEventListener('resize', handleWindowResize);
@@ -36,6 +37,7 @@ export const WindowProvider: React.FC = ({
 
   useEffect(() => {
     const handleScroll = () => setOffSetY(window.pageYOffset);
+
     window.addEventListener('scroll', handleScroll);
 
     return () => window.removeEventListener('scroll', handleScroll);
