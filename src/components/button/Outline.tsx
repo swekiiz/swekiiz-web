@@ -37,10 +37,10 @@ export const OutlineButton: React.FC<OutlineButtonPropsType> = ({
       }
       ${
         rest.disabled
-          ? 'text-light-gray border-light-gray bg-gray-800 cursor-not-allowed'
+          ? 'text-light-gray border-light-gray bg-white cursor-not-allowed'
           : isActive
-          ? 'text-black border-white bg-white'
-          : 'text-black border-black bg-white active:border-black active:bg-black hover:bg-black hover:text-white'
+          ? 'text-secondary border-white bg-white'
+          : 'text-secondary border-secondary bg-white active:border-secondary active:bg-secondary hover:bg-secondary hover:text-white'
       }`}
       onClick={onClick}
       {...rest}
