@@ -1,9 +1,9 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, CSSProperties } from 'react';
 
 type addProps = {
   children?: ReactNode;
   className?: string;
-  style?: { [key: string]: string | number };
+  style?: CSSProperties;
   isActive?: boolean;
   width?: string;
   size?: 'big' | 'medium' | 'small';
