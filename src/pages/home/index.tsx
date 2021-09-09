@@ -1,6 +1,6 @@
 import React from 'react';
 import { Lending, Screen } from 'layouts';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { BookAndBubble } from 'components/shape';
 import { ToggleThemeButton } from 'components/button';
 import { GradientVr } from 'components/line';
@@ -19,7 +19,6 @@ const Home: React.FC = (): JSX.Element => {
   return (
     <Lending>
       <Helmet>
-        <meta charSet="utf-8" />
         <title>swekiiz</title>
       </Helmet>
 

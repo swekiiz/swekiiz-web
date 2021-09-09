@@ -6,7 +6,7 @@ export const routes: { [name: string]: IRoute } = {
   home: {
     path: '/',
     component: lazy(() => import('pages/home')),
-    exact: false,
+    exact: true,
     fallback: <Fallback />,
   },
   // login: {
