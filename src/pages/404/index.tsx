@@ -10,7 +10,7 @@ const NotFound: React.FC = (): JSX.Element => {
     <Screen className="flex flex-col items-center justify-center">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>404...</title>
+        <title>404....</title>
       </Helmet>
       <h1 className="text-gradient mb-4 text-center text-3xl font-semibold">
         404 - Not found
