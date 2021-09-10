@@ -17,6 +17,12 @@ export const freezeRoutes = {
     exact: false,
     fallback: <Fallback />,
   },
+  play: {
+    path: '/play',
+    component: lazy(() => import('pages/playground')),
+    exact: false,
+    fallback: <Fallback />,
+  },
   // login: {
   //   path: '/login',
   //   component: lazy(() => import('pages/login')),
