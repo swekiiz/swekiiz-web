@@ -4,7 +4,8 @@ export const experiencesList: Array<IExperience> = [
   {
     year: '2017',
     title: 'Thailand open hackathon at Commart work 2017',
-    description: 'Participated in a competition and get a consolation prize.',
+    description:
+      'Participated in a coding problems competition and get a consolation prize.',
   },
   {
     year: '2017-2018',
@@ -15,7 +16,8 @@ export const experiencesList: Array<IExperience> = [
   {
     year: '2018',
     title: 'Techjam 2018 code squad (by KBTG)',
-    description: 'Participated in a competition and join to final round.',
+    description:
+      'Participated in a coding problems competition and join to final round.',
   },
   {
     year: '2018',
@@ -25,12 +27,14 @@ export const experiencesList: Array<IExperience> = [
   {
     year: '2019',
     title: 'International Collegiate Programming Contest (ICPC)',
-    description: 'Participated in a competition and join to second round.',
+    description:
+      'Participated in a coding problems competition and join to second round.',
   },
   {
     year: '2019',
     title: 'Techjam 2019 deep jam (by KBTG)',
-    description: 'Participated in a competition and join to final round.',
+    description:
+      'Participated in a coding problems competition and join to final round.',
   },
   {
     year: '2020',
@@ -42,6 +46,18 @@ export const experiencesList: Array<IExperience> = [
     year: '2020-2021',
     title: 'Testament, Inc.',
     description:
-      '8 Mouth of Full Stack developer and blockchain developer for create DApp.',
+      '9 Mouth of Full Stack developer and blockchain developer for create DApp.',
+  },
+  {
+    year: '2021',
+    title: 'Palo Alto Networks Capture the Flag Capture the Future Competition',
+    description:
+      'Participated in a networking competition and join to final round.',
+  },
+  {
+    year: '2021-2022',
+    title: 'Alpha finance Labs, Inc.',
+    description:
+      '1yr 2 mos of Full Stack developer for develop, maintenance leverage yield farming dapp and NFT marketplace.',
   },
 ];
